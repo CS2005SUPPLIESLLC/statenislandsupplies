@@ -1,0 +1,1 @@
+Place your product images here and match the filenames (e.g., tide.jpg, colgate.jpg).
