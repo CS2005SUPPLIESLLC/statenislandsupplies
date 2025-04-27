@@ -1,30 +1,62 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact - Staten Island Supplies</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Staten Island Supplies - Contact</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="logo">Staten Island Supplies</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Shop</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section style="padding: 2em;">
-            <h2>Contact Us</h2>
-            <p><strong>Phone:</strong> 917-361-1021</p>
-            <p><strong>Email:</strong> christiansgroi5677@gmail.com</p>
-            <p><strong>Location:</strong> Staten Island, NY</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Staten Island Supplies. All rights reserved.</p>
-    </footer>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">Staten Island Supplies</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Need assistance? Get in touch using the form below or reach out to us directly!</p>
+
+      <div class="contact-grid">
+        <div class="contact-form">
+          <form action="#">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+            <button type="submit" class="btn">Send</button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <p><strong>Address:</strong> 1234 Richmond Ave, Staten Island, NY</p>
+          <p><strong>Phone:</strong> (555) 123-4567</p>
+          <p><strong>Email:</strong> info@statenislandsupplies.com</p>
+          <p><strong>Hours:</strong> Mon–Fri: 9AM–6PM | Sat: 10AM–4PM</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Staten Island Supplies. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
