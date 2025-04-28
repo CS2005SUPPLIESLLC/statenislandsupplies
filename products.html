@@ -1,82 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products - Staten Island Supplies</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!-- Household Essentials -->
+<h2 id="household">Household Essentials</h2>
+<div class="product-grid">
 
-<header>
-  <div class="container">
-    <a href="index.html" class="logo">Staten Island Supplies</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html" class="active">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <div class="container">
-    <h1>Products</h1>
-
-    <div class="product-grid">
-
-      <!-- Example Products (repeat same structure for 50+ products) -->
-      <div class="product-item" onclick="showProduct('Tide Detergent', 'Powerful clean for all fabrics. 64 loads.')">
-        <img src="images/tide.jpg" alt="Tide Detergent">
-        <h3>Tide Detergent</h3>
-        <p>$12.99</p>
-      </div>
-
-      <div class="product-item" onclick="showProduct('Colgate Toothpaste', 'Advanced whitening toothpaste to fight cavities.')">
-        <img src="images/colgate.jpg" alt="Colgate Toothpaste">
-        <h3>Colgate Toothpaste</h3>
-        <p>$3.49</p>
-      </div>
-
-      <div class="product-item" onclick="showProduct('Dawn Dish Soap', 'Cuts through grease with ease, lemon scent.')">
-        <img src="images/dawn.jpg" alt="Dawn Dish Soap">
-        <h3>Dawn Dish Soap</h3>
-        <p>$4.99</p>
-      </div>
-
-      <!-- Keep repeating for 50+ products... -->
-
-    </div>
-  </div>
-</main>
-
-<!-- Popup Modal -->
-<div id="product-modal" class="modal">
-  <div class="modal-content">
-    <span onclick="closeProduct()" class="close">&times;</span>
-    <h2 id="modal-title"></h2>
-    <p id="modal-description"></p>
-  </div>
+<div class="product-item" onclick="showProduct('Tide Detergent', 'Deep clean laundry detergent. 64 loads.')">
+  <img src="images/tide.jpg" alt="Tide Detergent">
+  <h3>Tide Detergent</h3>
+  <p>$12.99</p>
 </div>
 
-<footer>
-  <div class="container">
-    <p>&copy; 2025 Staten Island Supplies. All rights reserved.</p>
-  </div>
-</footer>
+<div class="product-item" onclick="showProduct('Dawn Dish Soap', 'Cuts grease effectively with lemon scent.')">
+  <img src="images/dawn.jpg" alt="Dawn Dish Soap">
+  <h3>Dawn Dish Soap</h3>
+  <p>$4.99</p>
+</div>
 
-<script>
-function showProduct(title, description) {
-  document.getElementById('modal-title').innerText = title;
-  document.getElementById('modal-description').innerText = description;
-  document.getElementById('product-modal').style.display = 'block';
-}
-function closeProduct() {
-  document.getElementById('product-modal').style.display = 'none';
-}
-</script>
+<div class="product-item" onclick="showProduct('Bounty Paper Towels', '6-pack super absorbent paper towels.')">
+  <img src="images/bounty.jpg" alt="Bounty Paper Towels">
+  <h3>Bounty Paper Towels</h3>
+  <p>$8.99</p>
+</div>
 
-</body>
-</html>
+<div class="product-item" onclick="showProduct('Clorox Bleach', 'Disinfectant bleach for cleaning surfaces.')">
+  <img src="images/clorox.jpg" alt="Clorox Bleach">
+  <h3>Clorox Bleach</h3>
+  <p>$5.49</p>
+</div>
+
+<div class="product-item" onclick="showProduct('Windex Glass Cleaner', 'Streak-free shine for windows and mirrors.')">
+  <img src="images/windex.jpg" alt="Windex Glass Cleaner">
+  <h3>Windex Glass Cleaner</h3>
+  <p>$4.99</p>
+</div>
+
+<div class="product-item" onclick="showProduct('Ziploc Storage Bags', 'Reusable storage bags, 50 count.')">
+  <img src="images/ziploc.jpg" alt="Ziploc Storage Bags">
+  <h3>Ziploc Storage Bags</h3>
+  <p>$6.49</p>
+</div>
+
+<div class="product-item" onclick="showProduct('Lysol Disinfectant Spray', 'Kills 99.9% of germs, crisp linen scent.')">
+  <img src="images/lysol.jpg" alt="Lysol Disinfectant Spray">
+  <h3>Lysol Disinfectant Spray</h3>
+  <p>$7.99</p>
+</div>
+
+<div class="product-item" onclick="showProduct('Ajax Powder Cleanser', 'Tough stain remover for kitchen and bath.')">
+  <img src="images/ajax.jpg" alt="Ajax Powder Cleanser">
+  <h3>Ajax Powder Cleanser</h3>
+  <p>$2.49</p>
+</div>
+
+<div class="product-item" onclick="showProduct('Scott Toilet Paper', '12 rolls, strong and absorbent.')">
+  <img src="images/scott.jpg" alt="Scott Toilet Paper">
+  <h3>Scott Toilet Paper</h3>
+  <p>$7.99</p>
+</div>
+
+<div class="product-item" onclick="showProduct('Glad Trash Bags', '50 heavy-duty kitchen trash bags.')">
+  <img src="images/glad.jpg" alt="Glad Trash Bags">
+  <h3>Glad Trash Bags</h3>
+  <p>$10.99</p>
+</div>
+
+<!-- (Add about 10 more similar household items if you want full 20) -->
+
+</div>
+
+<!-- Deli Supplies -->
+<h2 id="deli">Deli Supplies</h2>
+<div class="product-grid">
+
+<div class="product-item" onclick="showProduct('FreshKeep Deli Containers', '50 pack, microwave-safe containers.')">
+  <img src="images/freshkeep.jpg" alt="FreshKeep Deli Containers">
+  <h3>FreshKeep Deli Containers</h3>
+  <p>$15.00</p>
+</div>
+
+<div class="product-item" onclick="showProduct('WrapMaster Deli Paper', 'Grease-resistant deli wrap, 500 sheets.')">
+  <img src="images/wrapmaster.jpg" alt="WrapMaster Deli Paper">
+  <h3>WrapMaster Deli Paper</h3>
+  <p>$11.25</p>
+</div>
+
+<div class="product-item" onclick="showProduct('ProServe Food Gloves', 'Disposable gloves for safe food handling.')">
+  <img src="images/proserve.jpg" alt="ProServe Food Gloves">
+  <h3>ProServe Food Gloves</h3>
+  <p>$9.50</p>
+</div>
+
+<div class="product-item" onclick="showProduct('Condiment Dispenser Bottles', 'Plastic squeeze bottles for sauces, 6 pack.')">
+  <img src="images/condiment.jpg" alt="Condiment Dispenser Bottles">
+  <h3>Condiment Dispenser Bottles</h3>
+  <p>$10.00</p>
+</div>
+
+<!-- (Add 11 more similar deli items if you want full 15) -->
+
+</div>
+
+<!-- Home Appliances -->
+<h2 id="appliances">Home Appliances</h2>
+<div class="product-grid">
+
+<div class="product-item" onclick="showProduct('Black+Decker Microwave', 'Compact microwave oven, 0.7 cubic feet.')">
+  <img src="images/blackdecker.jpg" alt="Black+Decker Microwave">
+  <h3>Black+Decker Microwave</h3>
+  <p>$99.99</p>
+</div>
+
+<div class="product-item" onclick="showProduct('Hamilton Beach Blender', 'Powerful blender for smoothies and shakes.')">
+  <img src="images/hamilton.jpg" alt="Hamilton Beach Blender">
+  <h3>Hamilton Beach Blender</h3>
+  <p>$49.99</p>
+</div>
+
+<div class="product-item" onclick="showProduct('Keurig Coffee Maker', 'Single-serve K-cup coffee brewer.')">
+  <img src="images/keurig.jpg" alt="Keurig Coffee Maker">
+  <h3>Keurig Coffee Maker</h3>
+  <p>$89.99</p>
+</div>
+
+<div class="product-item" onclick="showProduct('Dyson Vacuum Cleaner', 'Cordless stick vacuum cleaner.')">
+  <img src="images/dyson.jpg" alt="Dyson Vacuum Cleaner">
+  <h3>Dyson Vacuum Cleaner</h3>
+  <p>$399.99</p>
+</div>
+
+<!-- (Add 11 more similar appliances if you want full 15) -->
+
+</div>
+     
