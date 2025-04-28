@@ -1,12 +1,87 @@
-<h2>Household Essentials</h2>
-<div class="product-grid">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Staten Island Supplies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">Staten Island Supplies</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>Products</h1>
+
+    <!-- Household Essentials Section -->
+    <h2>Household Essentials</h2>
+    <div class="product-grid">
+      <!-- (Paste 20 household product-cards here) -->
+    </div>
+
+    <!-- Deli Supplies Section -->
+    <h2>Deli Supplies</h2>
+    <div class="product-grid">
+      <!-- (Paste 15 deli product-cards here) -->
+    </div>
+
+    <!-- Home Appliances Section -->
+    <h2>Home Appliances</h2>
+    <div class="product-grid">
+      <!-- (Paste 15 home appliance product-cards here) -->
+    </div>
+
+  </div>
+</main>
+
+<!-- Popup Modal for View Details -->
+<div id="product-modal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeProduct()" class="close">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-description"></p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Staten Island Supplies. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// Open popup with product info
+function showProduct(title, description) {
+  document.getElementById('modal-title').innerText = title;
+  document.getElementById('modal-description').innerText = description;
+  document.getElementById('product-modal').style.display = 'block';
+}
+// Close popup
+function closeProduct() {
+  document.getElementById('product-modal').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
 <div class="product-card">
   <img src="images/tide.jpg" alt="Tide Detergent">
   <div class="product-info">
     <h3>Tide Detergent</h3>
     <p>$12.99</p>
-    <a href="#" onclick="showProduct('Tide Detergent', 'Powerful laundry detergent, 64 loads.')">View Details</a>
+    <a href="#" onclick="showProduct('Tide Detergent', 'Powerful deep-clean laundry detergent. 64 loads.')">View Details</a>
   </div>
 </div>
 
@@ -15,7 +90,7 @@
   <div class="product-info">
     <h3>Dawn Dish Soap</h3>
     <p>$4.99</p>
-    <a href="#" onclick="showProduct('Dawn Dish Soap', 'Cuts through grease easily, fresh scent.')">View Details</a>
+    <a href="#" onclick="showProduct('Dawn Dish Soap', 'Cuts through grease with ease.')">View Details</a>
   </div>
 </div>
 
@@ -24,7 +99,7 @@
   <div class="product-info">
     <h3>Bounty Paper Towels</h3>
     <p>$8.99</p>
-    <a href="#" onclick="showProduct('Bounty Paper Towels', 'Super absorbent, 6 rolls.')">View Details</a>
+    <a href="#" onclick="showProduct('Bounty Paper Towels', 'Super absorbent paper towels.')">View Details</a>
   </div>
 </div>
 
@@ -33,7 +108,7 @@
   <div class="product-info">
     <h3>Clorox Bleach</h3>
     <p>$5.49</p>
-    <a href="#" onclick="showProduct('Clorox Bleach', 'Disinfecting cleaner for tough stains.')">View Details</a>
+    <a href="#" onclick="showProduct('Clorox Bleach', 'Disinfectant bleach for cleaning.')">View Details</a>
   </div>
 </div>
 
@@ -51,7 +126,7 @@
   <div class="product-info">
     <h3>Ziploc Storage Bags</h3>
     <p>$6.49</p>
-    <a href="#" onclick="showProduct('Ziploc Storage Bags', 'Reusable freezer-safe bags, 50 count.')">View Details</a>
+    <a href="#" onclick="showProduct('Ziploc Storage Bags', '50-count resealable bags.')">View Details</a>
   </div>
 </div>
 
@@ -60,7 +135,7 @@
   <div class="product-info">
     <h3>Lysol Disinfectant Spray</h3>
     <p>$7.99</p>
-    <a href="#" onclick="showProduct('Lysol Disinfectant Spray', 'Kills 99.9% of bacteria and viruses.')">View Details</a>
+    <a href="#" onclick="showProduct('Lysol Disinfectant Spray', 'Kills 99.9% of germs.')">View Details</a>
   </div>
 </div>
 
@@ -69,7 +144,7 @@
   <div class="product-info">
     <h3>Ajax Powder Cleanser</h3>
     <p>$2.49</p>
-    <a href="#" onclick="showProduct('Ajax Powder Cleanser', 'Removes tough grease and stains.')">View Details</a>
+    <a href="#" onclick="showProduct('Ajax Powder Cleanser', 'Removes grease and stains.')">View Details</a>
   </div>
 </div>
 
@@ -78,7 +153,7 @@
   <div class="product-info">
     <h3>Scott Toilet Paper</h3>
     <p>$7.99</p>
-    <a href="#" onclick="showProduct('Scott Toilet Paper', '12 rolls, strong and absorbent.')">View Details</a>
+    <a href="#" onclick="showProduct('Scott Toilet Paper', 'Strong and absorbent 12 rolls.')">View Details</a>
   </div>
 </div>
 
@@ -86,113 +161,13 @@
   <img src="images/glad.jpg" alt="Glad Trash Bags">
   <div class="product-info">
     <h3>Glad Trash Bags</h3>
-    <p>$10.99</p>
-    <a href="#" onclick="showProduct('Glad Trash Bags', 'Heavy-duty kitchen trash bags, 50 count.')">View Details</a>
-  </div>
-</div>
-
-<!-- 10 more household products below -->
-
-<div class="product-card">
-  <img src="images/armandhammer.jpg" alt="Arm & Hammer Baking Soda">
-  <div class="product-info">
-    <h3>Arm & Hammer Baking Soda</h3>
-    <p>$1.49</p>
-    <a href="#" onclick="showProduct('Arm & Hammer Baking Soda', 'Classic baking soda for cleaning and baking.')">View Details</a>
-  </div>
-</div>
-
-<div class="product-card">
-  <img src="images/mrclean.jpg" alt="Mr. Clean Magic Eraser">
-  <div class="product-info">
-    <h3>Mr. Clean Magic Eraser</h3>
-    <p>$3.49</p>
-    <a href="#" onclick="showProduct('Mr. Clean Magic Eraser', 'Easily removes stains from walls and surfaces.')">View Details</a>
-  </div>
-</div>
-
-<div class="product-card">
-  <img src="images/irishspring.jpg" alt="Irish Spring Soap">
-  <div class="product-info">
-    <h3>Irish Spring Soap</h3>
-    <p>$5.99</p>
-    <a href="#" onclick="showProduct('Irish Spring Soap', '6-pack, fresh scent body soap.')">View Details</a>
-  </div>
-</div>
-
-<div class="product-card">
-  <img src="images/oldspice.jpg" alt="Old Spice Body Wash">
-  <div class="product-info">
-    <h3>Old Spice Body Wash</h3>
-    <p>$6.99</p>
-    <a href="#" onclick="showProduct('Old Spice Body Wash', 'Refreshing long-lasting scent.')">View Details</a>
-  </div>
-</div>
-
-<div class="product-card">
-  <img src="images/dovebody.jpg" alt="Dove Body Wash">
-  <div class="product-info">
-    <h3>Dove Body Wash</h3>
-    <p>$6.99</p>
-    <a href="#" onclick="showProduct('Dove Body Wash', 'Moisturizing, gentle body cleanser.')">View Details</a>
-  </div>
-</div>
-
-<div class="product-card">
-  <img src="images/crest.jpg" alt="Crest 3D White Toothpaste">
-  <div class="product-info">
-    <h3>Crest 3D White Toothpaste</h3>
-    <p>$4.99</p>
-    <a href="#" onclick="showProduct('Crest 3D White Toothpaste', 'Advanced whitening formula.')">View Details</a>
-  </div>
-</div>
-
-<div class="product-card">
-  <img src="images/huggies.jpg" alt="Huggies Baby Wipes">
-  <div class="product-info">
-    <h3>Huggies Baby Wipes</h3>
-    <p>$2.99</p>
-    <a href="#" onclick="showProduct('Huggies Baby Wipes', 'Gentle baby wipes, 56 count.')">View Details</a>
-  </div>
-</div>
-
-<div class="product-card">
-  <img src="images/pampers.jpg" alt="Pampers Diapers">
-  <div class="product-info">
-    <h3>Pampers Diapers</h3>
-    <p>$29.99</p>
-    <a href="#" onclick="showProduct('Pampers Diapers', 'Size 4, 92-pack diapers.')">View Details</a>
-  </div>
-</div>
-
-<div class="product-card">
-  <img src="images/gatorade.jpg" alt="Gatorade 32oz Bottle">
-  <div class="product-info">
-    <h3>Gatorade 32oz Bottle</h3>
-    <p>$1.79</p>
-    <a href="#" onclick="showProduct('Gatorade 32oz Bottle', 'Replenish electrolytes, multiple flavors.')">View Details</a>
-  </div>
-</div>
-
-<div class="product-card">
-  <img src="images/pringles.jpg" alt="Pringles Original Chips">
-  <div class="product-info">
-    <h3>Pringles Original Chips</h3>
-    <p>$2.99</p>
-    <a href="#" onclick="showProduct('Pringles Original Chips', 'Crispy and delicious potato crisps.')">View Details</a>
-  </div>
-</div>
-
-</div> <!-- End Household Grid -->
-<h2>Deli Supplies</h2>
-<div class="product-grid">
-
+    <p>$10.99</p
 <div class="product-card">
   <img src="images/freshkeep.jpg" alt="FreshKeep Deli Containers">
   <div class="product-info">
     <h3>FreshKeep Deli Containers</h3>
     <p>$15.00</p>
-    <a href="#" onclick="showProduct('FreshKeep Deli Containers', 'Microwave-safe containers, 50 pack.')">View Details</a>
+    <a href="#" onclick="showProduct('FreshKeep Deli Containers', 'Microwave-safe deli containers, 50 pack.')">View Details</a>
   </div>
 </div>
 
@@ -210,7 +185,7 @@
   <div class="product-info">
     <h3>ProServe Food Gloves</h3>
     <p>$9.50</p>
-    <a href="#" onclick="showProduct('ProServe Food Gloves', 'Disposable gloves for food handling.')">View Details</a>
+    <a href="#" onclick="showProduct('ProServe Food Gloves', 'Disposable gloves, 100 count.')">View Details</a>
   </div>
 </div>
 
@@ -228,7 +203,7 @@
   <div class="product-info">
     <h3>Heavy-Duty Plastic Forks</h3>
     <p>$7.00</p>
-    <a href="#" onclick="showProduct('Heavy-Duty Plastic Forks', '100-pack strong disposable forks.')">View Details</a>
+    <a href="#" onclick="showProduct('Heavy-Duty Plastic Forks', 'Strong disposable forks, 100 pack.')">View Details</a>
   </div>
 </div>
 
@@ -237,7 +212,7 @@
   <div class="product-info">
     <h3>Heavy-Duty Plastic Knives</h3>
     <p>$7.00</p>
-    <a href="#" onclick="showProduct('Heavy-Duty Plastic Knives', '100-pack strong disposable knives.')">View Details</a>
+    <a href="#" onclick="showProduct('Heavy-Duty Plastic Knives', 'Strong disposable knives, 100 pack.')">View Details</a>
   </div>
 </div>
 
@@ -255,7 +230,7 @@
   <div class="product-info">
     <h3>Waxed Deli Sheets</h3>
     <p>$9.25</p>
-    <a href="#" onclick="showProduct('Waxed Deli Sheets', 'Greaseproof deli wrap sheets.')">View Details</a>
+    <a href="#" onclick="showProduct('Waxed Deli Sheets', 'Greaseproof wax paper for deli.')">View Details</a>
   </div>
 </div>
 
@@ -264,7 +239,7 @@
   <div class="product-info">
     <h3>Food Handling Hairnets</h3>
     <p>$5.00</p>
-    <a href="#" onclick="showProduct('Food Handling Hairnets', 'Protective hairnets for kitchens, 100 pack.')">View Details</a>
+    <a href="#" onclick="showProduct('Food Handling Hairnets', 'Protective hairnets, 100 pack.')">View Details</a>
   </div>
 </div>
 
@@ -273,7 +248,7 @@
   <div class="product-info">
     <h3>Serving Tongs</h3>
     <p>$3.99</p>
-    <a href="#" onclick="showProduct('Serving Tongs', 'Stainless steel deli serving tongs.')">View Details</a>
+    <a href="#" onclick="showProduct('Serving Tongs', 'Stainless steel serving tongs.')">View Details</a>
   </div>
 </div>
 
@@ -291,7 +266,7 @@
   <div class="product-info">
     <h3>Portion Cups</h3>
     <p>$5.99</p>
-    <a href="#" onclick="showProduct('Portion Cups', '2 oz portion cups with lids.')">View Details</a>
+    <a href="#" onclick="showProduct('Portion Cups', '2 oz small cups, perfect for sauces.')">View Details</a>
   </div>
 </div>
 
@@ -300,7 +275,7 @@
   <div class="product-info">
     <h3>Foil Food Wrap</h3>
     <p>$7.50</p>
-    <a href="#" onclick="showProduct('Foil Food Wrap', 'Aluminum foil wrap, heavy-duty.')">View Details</a>
+    <a href="#" onclick="showProduct('Foil Food Wrap', 'Heavy-duty aluminum foil.')">View Details</a>
   </div>
 </div>
 
@@ -309,7 +284,7 @@
   <div class="product-info">
     <h3>Bakery Boxes</h3>
     <p>$14.00</p>
-    <a href="#" onclick="showProduct('Bakery Boxes', 'White bakery cake boxes, 12x12x5, 10 pack.')">View Details</a>
+    <a href="#" onclick="showProduct('Bakery Boxes', 'White bakery cake boxes, 10 pack.')">View Details</a>
   </div>
 </div>
 
@@ -318,14 +293,9 @@
   <div class="product-info">
     <h3>Cling Film Wrap</h3>
     <p>$6.99</p>
-    <a href="#" onclick="showProduct('Cling Film Wrap', 'Plastic wrap for food storage.')">View Details</a>
+    <a href="#" onclick="showProduct('Cling Film Wrap', 'Plastic food wrap, heavy-duty.')">View Details</a>
   </div>
 </div>
-
-</div> <!-- End Deli Supplies Section -->
-<h2>Home Appliances</h2>
-<div class="product-grid">
-
 <div class="product-card">
   <img src="images/blackdecker.jpg" alt="Black+Decker Microwave">
   <div class="product-info">
@@ -340,7 +310,7 @@
   <div class="product-info">
     <h3>Hamilton Beach Blender</h3>
     <p>$49.99</p>
-    <a href="#" onclick="showProduct('Hamilton Beach Blender', 'Smoothie and shakes personal blender.')">View Details</a>
+    <a href="#" onclick="showProduct('Hamilton Beach Blender', 'Personal blender for smoothies.')">View Details</a>
   </div>
 </div>
 
@@ -349,7 +319,7 @@
   <div class="product-info">
     <h3>Keurig Coffee Maker</h3>
     <p>$89.99</p>
-    <a href="#" onclick="showProduct('Keurig Coffee Maker', 'Single-serve K-cup brewing system.')">View Details</a>
+    <a href="#" onclick="showProduct('Keurig Coffee Maker', 'Single-serve K-Cup coffee brewer.')">View Details</a>
   </div>
 </div>
 
@@ -367,7 +337,7 @@
   <div class="product-info">
     <h3>Cuisinart Toaster Oven</h3>
     <p>$129.99</p>
-    <a href="#" onclick="showProduct('Cuisinart Toaster Oven', 'Air fry, bake, broil combo.')">View Details</a>
+    <a href="#" onclick="showProduct('Cuisinart Toaster Oven', 'Air fry + bake + broil combo.')">View Details</a>
   </div>
 </div>
 
@@ -376,7 +346,7 @@
   <div class="product-info">
     <h3>Dyson Vacuum Cleaner</h3>
     <p>$399.99</p>
-    <a href="#" onclick="showProduct('Dyson Vacuum Cleaner', 'Cordless lightweight suction power.')">View Details</a>
+    <a href="#" onclick="showProduct('Dyson Vacuum Cleaner', 'Cordless lightweight vacuum.')">View Details</a>
   </div>
 </div>
 
@@ -385,7 +355,7 @@
   <div class="product-info">
     <h3>Shark Steam Mop</h3>
     <p>$79.99</p>
-    <a href="#" onclick="showProduct('Shark Steam Mop', 'Steam-powered floor cleaner.')">View Details</a>
+    <a href="#" onclick="showProduct('Shark Steam Mop', 'Steam-powered hard floor cleaner.')">View Details</a>
   </div>
 </div>
 
@@ -394,7 +364,7 @@
   <div class="product-info">
     <h3>KitchenAid Hand Mixer</h3>
     <p>$59.99</p>
-    <a href="#" onclick="showProduct('KitchenAid Hand Mixer', '5-speed handheld mixer.')">View Details</a>
+    <a href="#" onclick="showProduct('KitchenAid Hand Mixer', '5-speed lightweight mixer.')">View Details</a>
   </div>
 </div>
 
@@ -412,7 +382,7 @@
   <div class="product-info">
     <h3>GE Mini Fridge</h3>
     <p>$149.99</p>
-    <a href="#" onclick="showProduct('GE Mini Fridge', 'Compact refrigerator for small spaces.')">View Details</a>
+    <a href="#" onclick="showProduct('GE Mini Fridge', 'Compact fridge for small spaces.')">View Details</a>
   </div>
 </div>
 
@@ -421,7 +391,7 @@
   <div class="product-info">
     <h3>Oster Electric Kettle</h3>
     <p>$34.99</p>
-    <a href="#" onclick="showProduct('Oster Electric Kettle', 'Rapid-boil cordless kettle.')">View Details</a>
+    <a href="#" onclick="showProduct('Oster Electric Kettle', 'Fast boil cordless kettle.')">View Details</a>
   </div>
 </div>
 
@@ -439,7 +409,7 @@
   <div class="product-info">
     <h3>Hoover Carpet Cleaner</h3>
     <p>$159.99</p>
-    <a href="#" onclick="showProduct('Hoover Carpet Cleaner', 'Deep clean carpets with power scrubbing.')">View Details</a>
+    <a href="#" onclick="showProduct('Hoover Carpet Cleaner', 'Deep clean heavy traffic carpets.')">View Details</a>
   </div>
 </div>
 
@@ -448,7 +418,7 @@
   <div class="product-info">
     <h3>Whirlpool Portable Dishwasher</h3>
     <p>$649.99</p>
-    <a href="#" onclick="showProduct('Whirlpool Portable Dishwasher', 'Countertop model with full wash cycles.')">View Details</a>
+    <a href="#" onclick="showProduct('Whirlpool Portable Dishwasher', 'Compact portable dishwashing.')">View Details</a>
   </div>
 </div>
 
@@ -457,8 +427,6 @@
   <div class="product-info">
     <h3>Frigidaire Chest Freezer</h3>
     <p>$399.99</p>
-    <a href="#" onclick="showProduct('Frigidaire Chest Freezer', 'Extra storage for frozen foods.')">View Details</a>
+    <a href="#" onclick="showProduct('Frigidaire Chest Freezer', 'Extra freezer storage for food.')">View Details</a>
   </div>
 </div>
-
-</div> <!-- End Home Appliances Section -->
