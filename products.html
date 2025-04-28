@@ -1,72 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Staten Island Supplies - Products</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Staten Island Supplies</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <a href="index.html" class="logo">Staten Island Supplies</a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html" class="active">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">Staten Island Supplies</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-  <main>
-    <div class="container">
-      <h1>Our Products</h1>
+<main>
+  <div class="container">
+    <h1>Products</h1>
 
-      <h2 id="household">Household Goods</h2>
-      <div class="product-grid">
-        <div class="product-item">
-          <img src="https://via.placeholder.com/300" alt="Multi-Surface Cleaner" />
-          <h3>UltraClean Multi-Surface Cleaner</h3>
-          <p>Cuts through grease and grime. Fresh lemon scent.</p>
-          <p class="price">$5.99</p>
-        </div>
-        <div class="product-item">
-          <img src="https://via.placeholder.com/300" alt="Microfiber Cloths" />
-          <h3>HomeBright Microfiber Cloths (12-Pack)</h3>
-          <p>Reusable, lint-free towels perfect for cleaning and dusting.</p>
-          <p class="price">$12.99</p>
-        </div>
+    <div class="product-grid">
+
+      <!-- Example Products (repeat same structure for 50+ products) -->
+      <div class="product-item" onclick="showProduct('Tide Detergent', 'Powerful clean for all fabrics. 64 loads.')">
+        <img src="images/tide.jpg" alt="Tide Detergent">
+        <h3>Tide Detergent</h3>
+        <p>$12.99</p>
       </div>
 
-      <h2 id="deli">Deli Supplies</h2>
-      <div class="product-grid">
-        <div class="product-item">
-          <img src="https://via.placeholder.com/300" alt="Deli Containers" />
-          <h3>FreshKeep Deli Containers (50 Pack)</h3>
-          <p>Microwave-safe deli containers with secure lids.</p>
-          <p class="price">$15.00</p>
-        </div>
-        <div class="product-item">
-          <img src="https://via.placeholder.com/300" alt="Deli Paper" />
-          <h3>WrapMaster Deli Paper (500 Sheets)</h3>
-          <p>Grease-resistant paper for sandwiches and snacks.</p>
-          <p class="price">$11.25</p>
-        </div>
+      <div class="product-item" onclick="showProduct('Colgate Toothpaste', 'Advanced whitening toothpaste to fight cavities.')">
+        <img src="images/colgate.jpg" alt="Colgate Toothpaste">
+        <h3>Colgate Toothpaste</h3>
+        <p>$3.49</p>
       </div>
 
-    </div>
-  </main>
+      <div class="product-item" onclick="showProduct('Dawn Dish Soap', 'Cuts through grease with ease, lemon scent.')">
+        <img src="images/dawn.jpg" alt="Dawn Dish Soap">
+        <h3>Dawn Dish Soap</h3>
+        <p>$4.99</p>
+      </div>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Staten Island Supplies. All rights reserved.</p>
+      <!-- Keep repeating for 50+ products... -->
+
     </div>
-  </footer>
+  </div>
+</main>
+
+<!-- Popup Modal -->
+<div id="product-modal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeProduct()" class="close">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-description"></p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Staten Island Supplies. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+function showProduct(title, description) {
+  document.getElementById('modal-title').innerText = title;
+  document.getElementById('modal-description').innerText = description;
+  document.getElementById('product-modal').style.display = 'block';
+}
+function closeProduct() {
+  document.getElementById('product-modal').style.display = 'none';
+}
+</script>
 
 </body>
 </html>
-
-
